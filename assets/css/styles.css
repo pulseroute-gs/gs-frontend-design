@@ -134,6 +134,125 @@ h2 {
     margin-bottom: 0;
 }
 
+#hero{
+    padding: 2.5rem 2rem;
+}
+
+#hero .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-text .tag{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+    color: var(--secondary-dark);
+    gap: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+}
+
+.main-text h1{
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-top: 40px;
+}
+
+h1 strong{
+    color: var(--primary);
+}
+
+.main-text .sub-text{
+    margin-top: 40px;
+    color: var(--text-secondary);
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 580px;
+}
+
+.buttons{
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn-green {
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 15px;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    box-shadow: 0 8px 15px rgba(29, 223, 241, 0.2);
+    color: white;
+    text-decoration: none;
+    width: 230px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-green a{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-green i{
+    font-size: 25px;
+}
+
+.btn-white{
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 15px;
+    color: var(--secondary-dark);
+    text-decoration: none;
+    width: 230px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 180px;
+}
+
+.cards{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 630px;
+}
+
+.card{
+    width: 200px;
+    height: 130px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.card-title{
+    margin-top: 15px;
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--primary);
+}
+
+.card p{
+    font-weight: 400;
+    color: var(--text-secondary);
+    font-size: 15px;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
 /* ==========================================================================
    RESPONSIVO
    ========================================================================== */
