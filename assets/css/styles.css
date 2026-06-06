@@ -1,0 +1,239 @@
+/* Âncoras não ficam sob o header fixo */
+section[id] {
+    scroll-margin-top: 110px;
+}
+
+/* Card neumórfico (usado por cada section) */
+.neu-box {
+    background: var(--bg-color);
+    border-radius: 24px;
+    box-shadow: 12px 12px 24px var(--neu-dark),
+        -12px -12px 24px var(--neu-light);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* --------------------------------------------------------------------------
+   MAIN & SECTIONS
+   -------------------------------------------------------------------------- */
+main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 2.5rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Card com imagem (zig-zag): texto + imagem lado a lado */
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 3rem;
+    padding: 2.75rem;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Detalhe de cor no topo de cada card */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    border-radius: 0 0 6px 6px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    z-index: 1;
+}
+
+.section-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-media {
+    flex: 0 0 44%;
+    max-width: 44%;
+}
+
+.section-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 8px 8px 20px var(--neu-dark),
+        -8px -8px 20px var(--neu-light);
+    display: block;
+}
+
+/* Zig-zag: alterna o lado da imagem */
+.img-left .container {
+    flex-direction: row;
+}
+
+.img-right .container {
+    flex-direction: row-reverse;
+}
+
+/* Ícone circular com GIF dentro */
+.icon-wrapper {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    background: var(--bg-color);
+    box-shadow: 6px 6px 12px var(--neu-dark),
+        -6px -6px 12px var(--neu-light);
+}
+
+.icon-gif {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+    mix-blend-mode: multiply;
+    /* remove o fundo branco do GIF */
+}
+
+.kicker {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.content p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVO
+   ========================================================================== */
+
+/* --- Tablet / telas médias (≤ 900px) --- */
+@media (max-width: 900px) {
+    .section {
+        padding: 2rem 1.5rem;
+    }
+
+    .container {
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .section-media {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .content p {
+        font-size: 1.05rem;
+    }
+}
+
+/* --- Mobile (≤ 600px): empilha imagem em cima, texto embaixo --- */
+@media (max-width: 600px) {
+    section[id] {
+        scroll-margin-top: 80px;
+    }
+
+    .section {
+        padding: 1.25rem 1rem;
+    }
+
+    /* Zig-zag vira coluna única — imagem sempre no topo */
+    .img-left .container,
+    .img-right .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .neu-box {
+        border-radius: 20px;
+        box-shadow: 8px 8px 16px var(--neu-dark),
+            -8px -8px 16px var(--neu-light);
+    }
+
+    .section-media {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+
+    .section-media img {
+        border-radius: 14px;
+        box-shadow: 6px 6px 14px var(--neu-dark),
+            -6px -6px 14px var(--neu-light);
+    }
+
+    .icon-wrapper {
+        width: 68px;
+        height: 68px;
+        margin-bottom: 1rem;
+    }
+
+    .icon-gif {
+        width: 44px;
+        height: 44px;
+    }
+
+    .kicker {
+        font-size: 0.72rem;
+        letter-spacing: 1.2px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+/* --- Mobile pequeno (≤ 380px) --- */
+@media (max-width: 380px) {
+    .img-left .container,
+    .img-right .container {
+        padding: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+}
