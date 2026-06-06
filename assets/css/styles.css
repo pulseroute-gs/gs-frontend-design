@@ -17,7 +17,7 @@ body{
         circle at top left,
         #d8f3f5 0%,
         #edf2f4 20%,
-        #f5f5f5 100%
+        var(--bg-color) 100%
     );
 }
 
@@ -302,6 +302,32 @@ h1 strong{
     margin: 0 auto;
 }
 
+footer{
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: var(--bg-color);
+    border-radius: 50px 50px 0 0;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
+}
+
+footer img{
+    margin: 40px auto;
+    padding-top: 40px;
+}
+
+.alunos{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 200px;
+}
+
+.aluno{
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
 /* ==========================================================================
    RESPONSIVO
    ========================================================================== */
@@ -328,6 +354,10 @@ h1 strong{
 
     .content p {
         font-size: 1.05rem;
+    }
+
+    header nav{
+        display: none;
     }
 
     #hero {
@@ -408,6 +438,20 @@ h1 strong{
 
     #card3{
         display: none;
+    }
+
+    footer p{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .alunos{
+        display: inline;
+        align-items: center;
+    }
+
+    .aluno{
+        width: 300px;
+        margin: 10px auto;
     }
 }
 
