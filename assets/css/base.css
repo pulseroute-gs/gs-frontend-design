@@ -14,6 +14,12 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Âncoras não ficam sob o header fixo */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+
 :root {
     /* Base Neumórfica */
     --bg-color: #ECF0F3;

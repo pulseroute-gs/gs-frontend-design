@@ -14,17 +14,19 @@
 <body>
 
     <header class="header">
-        <a href="#hero">
-            <img src="./assets/icons/logo-header-desk.svg" alt="Logo PulseRoute" id="logoHeader">
-        </a>
-        <nav>
-            <a href="#problema">Problema</a>
-            <a href="#tecnologia">Tecnologia</a>
-            <a href="#objetivos">Objetivos</a>
-            <a href="#publico-alvo">Público</a>
-            <a href="#beneficios">Benefícios</a>
-            <a href="#aplicacao">Aplicação</a>
-        </nav>
+        <div class="header-inner">
+            <a href="#hero" class="header-logo">
+                <img src="./assets/icons/logo-header-desk.svg" alt="Logo PulseRoute" id="logoHeader">
+            </a>
+            <nav>
+                <a href="#problema">Problema</a>
+                <a href="#tecnologia">Tecnologia</a>
+                <a href="#objetivos">Objetivos</a>
+                <a href="#publico-alvo">Público</a>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#aplicacao">Aplicação</a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -34,38 +36,35 @@
                     <div class="tag">
                         <img src="./assets/icons/icone-antena-hero.svg" alt="Icon antena">
                         <p>Global Solution FIAP 2026</p>
-                        
                     </div>
-                    <h1>Corredores verdes <strong id="destaque">inteligentes</strong> para salvar vidas</h1>
+                    <h1>Corredores verdes <span id="destaque">inteligentes</span> para salvar vidas</h1>
                     <p class="sub-text">A PulseRoute libera o trânsito antes da ambulância chegar — combinando posicionamento por satélite, semáforos inteligentes e roteamento em nuvem para que cada segundo conte.</p>
                     <div class="buttons">
-                    <div class="btn-green">
-                        <a href="#">
-                            <p>Conheça a solução</p>
-                            <i class="bx bx-arrow-down-stroke"></i>
+                        <a href="#objetivos" class="btn-green">
+                            <span>Conheça a solução</span>
+                            <img src="./assets/icons/icone-cta-hero.svg" alt="">
                         </a>
+                        <a href="#tecnologia" class="btn-white">Ver a tecnologia</a>
                     </div>
-                    <div class="btn-white">Ver a tecnologia</div>
-
+                    <div class="cards">
+                        <div class="card">
+                            <h6 class="card-title">-30%</h6>
+                            <p>tempo de<br>deslocamento</p>
+                        </div>
+                        <div class="card">
+                            <h6 class="card-title">24/7</h6>
+                            <p>cobertura via satélite</p>
+                        </div>
+                        <div class="card">
+                            <h6 class="card-title">+vidas</h6>
+                            <p>salvas a cada minuto</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="cards">
-                    <div class="card">
-                        <h6 class="card-title">-30%</h6>
-                        <p>tempo de deslocamento</p>
-                    </div>
-                    <div class="card">
-                        <h6 class="card-title">24/07</h6>
-                        <p>cobertura via satélite</p>
-                    </div>
-                    <div class="card" id="card3">
-                        <h6 class="card-title">+vidas</h6>
-                        <p>salvas por minuto</p>
-                    </div>
+                <div class="hero-image-wrapper">
+                    <img id="hero-banner" src="./assets/imgs/banner-desk-hero.png" alt="Ambulância e semáforos inteligentes">
                 </div>
-                </div>
-                <img id="hero-banner" src="./assets/imgs/banner-desk-hero.png" alt="Ambulância e semaforos inteligentes">
             </div>
-            
         </section>
 
         <section id="problema" class="section has-image img-left">
@@ -191,23 +190,17 @@
 
     <!-- RODAPÉ -->
     <footer class="footer">
-        <img src="./assets/icons/logo-header-desk.svg" alt="Logo PulseRoute">
-        <p>Global Solution FIAP 2026 — Corredores verdes para emergências</p>
-        <div class="alunos">
-            <div class="aluno">
-                <p>Ana — RM 572278</p>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="./assets/icons/logo-header-desk.svg" alt="Logo PulseRoute">
             </div>
-            <div class="aluno">
-                <p>Arthur — RM 570387</p>
-            </div>
-            <div class="aluno">
-                <p>Carolina — RM 571664</p>
-            </div>
-            <div class="aluno">
-                <p>Sávio — RM 570789</p>
-            </div>
-            <div class="aluno">
-                <p>Victor — RM 572781</p>
+            <p class="footer-tagline">Global Solution FIAP 2026 — Corredores verdes para emergências</p>
+            <div class="alunos">
+                <div class="aluno"><p>Ana — RM 572278</p></div>
+                <div class="aluno"><p>Arthur — RM 570387</p></div>
+                <div class="aluno"><p>Carolina — RM 571664</p></div>
+                <div class="aluno"><p>Sávio — RM 570789</p></div>
+                <div class="aluno"><p>Victor — RM 572781</p></div>
             </div>
         </div>
     </footer>
